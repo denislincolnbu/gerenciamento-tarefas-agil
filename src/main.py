@@ -1,6 +1,6 @@
 # Arquivo: src/main.py
 
-from models.tarefa import Tarefa, Status
+from .models.tarefa import Tarefa, Status
 from datetime import datetime
 
 # Simulação de um banco de dados
