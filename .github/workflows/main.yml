@@ -20,7 +20,7 @@ jobs:
     - name: Configurar Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'  # Define a versão do Python a ser usada.
+        python-version: '3.x'
 
     - name: Instalar Dependências
       run: |
@@ -29,4 +29,4 @@ jobs:
 
     - name: Rodar Testes
       run: |
-        pytest
+        pytest tests/
