@@ -1,0 +1,51 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.2" pages="2">
+  <diagram id="lihFldyLVH6neoOUqxUO" name="Página-1">
+    <mxGraphModel dx="1426" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Usuario" value="Usuário" style="swimlane;childLayout=stackLayout;horizontal=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="120" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Hrr0ufBr0Ro41wl7IX73-2" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;- idUsuario: int&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;- nome: String&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;- email: String&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Usuario">
+          <mxGeometry y="23" width="110" height="67" as="geometry" />
+        </mxCell>
+        <mxCell id="Tarefa" value="Tarefa" style="swimlane;childLayout=stackLayout;horizontal=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="390" y="120" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="Quadro" value="QuadroKanban" style="swimlane;childLayout=stackLayout;horizontal=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="95" y="310" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Hrr0ufBr0Ro41wl7IX73-4" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;- idQuadro: int&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;- nome: String&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;- listaTarefas: List&amp;lt;Tarefa&amp;gt;&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Quadro">
+          <mxGeometry y="23" width="170" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="Status" value="Status {enum}" style="swimlane;childLayout=stackLayout;horizontal=1;rounded=0;startSize=23;" parent="1" vertex="1">
+          <mxGeometry x="400" y="300" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Hrr0ufBr0Ro41wl7IX73-5" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;A_FAZER&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;EM_PROGRESSO&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;CONCLUIDO&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="Status">
+          <mxGeometry y="23" width="130" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" parent="1" source="Usuario" target="Tarefa" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" parent="1" source="Quadro" target="Tarefa" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" parent="1" source="Tarefa" target="Status" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hrr0ufBr0Ro41wl7IX73-1" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;- idTarefa: int&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;- titulo: String&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;- descricao: String&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;- status: Status&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;- dataCriacao: Date&lt;/span&gt;&lt;br style=&quot;padding: 0px; margin: 0px; font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;- dataConclusao: Date&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="415" y="163" width="150" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="y72AX1QKEZhxB4x7qY9G" name="Página-2">
+    <mxGraphModel dx="1426" dy="811" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,48 @@
+
+<mxGraphModel dx="1484" dy="796" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    
+    <!-- Ator -->
+    <mxCell id="actor1" value="Usuário (Equipe de Logística)" style="shape=umlActor;" vertex="1" parent="1">
+      <mxGeometry x="20" y="200" width="40" height="80" as="geometry"/>
+    </mxCell>
+    
+    <!-- Casos de Uso principais -->
+    <mxCell id="uc1" value="Gerenciar Tarefas" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="200" y="100" width="140" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc2" value="Organizar Tarefas" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="200" y="220" width="140" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc3" value="Visualizar Fluxo de Trabalho" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="200" y="340" width="200" height="60" as="geometry"/>
+    </mxCell>
+
+    <!-- Subcasos Gerenciar -->
+    <mxCell id="uc1a" value="Criar Tarefa" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="420" y="60" width="120" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc1b" value="Visualizar Tarefa" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="420" y="110" width="120" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc1c" value="Editar Tarefa" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="420" y="160" width="120" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="uc1d" value="Excluir Tarefa" style="ellipse;whiteSpace=wrap;" vertex="1" parent="1">
+      <mxGeometry x="420" y="210" width="120" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- Ligações do Ator -->
+    <mxCell id="e1" edge="1" parent="1" source="actor1" target="uc1"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e2" edge="1" parent="1" source="actor1" target="uc2"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e3" edge="1" parent="1" source="actor1" target="uc3"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+    <!-- Ligações include -->
+    <mxCell id="e4" value="&lt;&lt;include&gt;&gt;" edge="1" parent="1" source="uc1" target="uc1a"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e5" value="&lt;&lt;include&gt;&gt;" edge="1" parent="1" source="uc1" target="uc1b"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e6" value="&lt;&lt;include&gt;&gt;" edge="1" parent="1" source="uc1" target="uc1c"><mxGeometry relative="1" as="geometry"/></mxCell>
+    <mxCell id="e7" value="&lt;&lt;include&gt;&gt;" edge="1" parent="1" source="uc1" target="uc1d"><mxGeometry relative="1" as="geometry"/></mxCell>
+  </root>
+</mxGraphModel>
